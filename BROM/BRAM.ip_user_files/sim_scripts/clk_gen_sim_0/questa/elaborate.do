@@ -1,0 +1,1 @@
+vopt -64 +acc -l elaborate.log -L clk_gen_sim_v1_0_0 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -work xil_defaultlib xil_defaultlib.clk_gen_sim_0 xil_defaultlib.glbl -o clk_gen_sim_0_opt

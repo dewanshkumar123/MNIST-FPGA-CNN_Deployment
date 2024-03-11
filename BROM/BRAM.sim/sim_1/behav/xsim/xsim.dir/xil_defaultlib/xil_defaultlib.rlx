@@ -1,0 +1,10 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+C:/Digital Systems/BRAM/BRAM.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+C:/Digital Systems/BRAM/BRAM.srcs/sim_1/new/brom_tb.v,1709983809,verilog,,,,brom_tb1,,,,,,,,
+C:/Digital Systems/BRAM/BRAM.srcs/sim_1/new/tb.v,1709965589,verilog,,,,tb,,,,,,,,
+C:/Digital Systems/BRAM/BRAM.srcs/sources_1/ip/blk_mem_gen_2/sim/blk_mem_gen_2.v,1709983276,verilog,,C:/Digital Systems/BRAM/BRAM.srcs/sources_1/new/brom2.v,,blk_mem_gen_2,,,,,,,,
+C:/Digital Systems/BRAM/BRAM.srcs/sources_1/new/bram.v,1709965596,verilog,,C:/Digital Systems/BRAM/BRAM.srcs/sim_1/new/tb.v,,bram,,,,,,,,
+C:/Digital Systems/BRAM/BRAM.srcs/sources_1/new/brom2.v,1709983763,verilog,,C:/Digital Systems/BRAM/BRAM.srcs/sim_1/new/brom_tb.v,,brom2,,,,,,,,
