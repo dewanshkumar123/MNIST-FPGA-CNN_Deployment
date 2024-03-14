@@ -4,15 +4,15 @@
 # March 15, 2024
 
 ## Group Members:-
-Sushant Gudmewar (22110264)
-John Twipraham Debbarma(22110108)
-Parag Sarvoday (22110179)
+Sushant Gudmewar (22110264),
+John Twipraham Debbarma (22110108),
+Parag Sarvoday (22110179) &
 Dewansh Kumar (22110071)
 
 
 	Below are the requirements and tasks done for Week 1.
 	
-### (a) Problem objective: Deployment a trained 3-D CNN model on FPGA for image classification of the MNIST dataset.
+### (a) Problem objective: Deployment of a trained 3-D CNN model on FPGA for image classification of the MNIST dataset.
 
 
 ### (b) Description of the different modules: 
