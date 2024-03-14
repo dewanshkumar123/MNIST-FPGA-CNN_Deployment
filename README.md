@@ -34,136 +34,136 @@ Week 4: You can deploy the trained model for inference on FPGA. Your final goal 
 ### (d) Week-1 update (all the Verilog codes, python codes, etc and a video or PPTs): 
 Verilog codes: 
 
-`timescale 1ns / 1ps
-
-module test(
-    input clk,
-    input read,
-    input write,
-    input reset,
-    input enable,
-    input [3:0]din,
-    output reg [4:0]sum,
-    output reg [3:0]dout
-    );
-    
-   reg [3:0]add_w=0;
-   reg [3:0]add_r=0;
-   reg [3:0]add_next1,add_next2;
-   wire [3:0] dout;
-   
-   
-blk_mem_gen_0 your_instance_name (
-  .clka(clk),    // input wire clka
-  .ena(enable),      // input wire ena
-  .wea(write),      // input wire [0 : 0] wea
-  .addra(add_w),  // input wire [3 : 0] addra
-  .dina(din),    // input wire [3 : 0] dina
-  .clkb(clk),    // input wire clkb
-  .enb(read),      // input wire enb
-  .addrb(add_r),  // input wire [3 : 0] addrb
-  .doutb(dout)  // output wire [3 : 0] doutb
-);
-
-always@(posedge clk)
-begin
-    add_r<=add_next1;
-    add_w<=add_next2;
-end
-  
-  //write operation
-always@(*)
-    begin
-    if (reset)
-        add_next2<=0;
-    else if (write)
-        begin
-        if (add_next2==4'b1111)
-            add_next2=add_w;
-        else
-            add_next2=add_w+1;
-         end
-    else
-        add_next2=add_next2;
-    end
- 
- 
- always@(*)
-    begin
-    if (reset)
-        add_next1<=0;
-    else if (read)
-        begin
-        if (add_next1==4'b1111)
-            add_next1=add_r;
-        else
-            add_next1=add_r+1;
-        end
-    else
-        add_next1=add_next1;
-    end
-   
-//   wire [3:0]s;
-//   wire c;
-//sum(dout,dout,0,s,c);  
-//assign sum={c,s};
-
-always@(*)
-begin
-//    if (dout[0])
-        sum=din+dout;
-//    else
-//        sum=0;
-end
-
-
-endmodule
+	`timescale 1ns / 1ps
+	
+	module test(
+	    input clk,
+	    input read,
+	    input write,
+	    input reset,
+	    input enable,
+	    input [3:0]din,
+	    output reg [4:0]sum,
+	    output reg [3:0]dout
+	    );
+	    
+	   reg [3:0]add_w=0;
+	   reg [3:0]add_r=0;
+	   reg [3:0]add_next1,add_next2;
+	   wire [3:0] dout;
+	   
+	   
+	blk_mem_gen_0 your_instance_name (
+	  .clka(clk),    // input wire clka
+	  .ena(enable),      // input wire ena
+	  .wea(write),      // input wire [0 : 0] wea
+	  .addra(add_w),  // input wire [3 : 0] addra
+	  .dina(din),    // input wire [3 : 0] dina
+	  .clkb(clk),    // input wire clkb
+	  .enb(read),      // input wire enb
+	  .addrb(add_r),  // input wire [3 : 0] addrb
+	  .doutb(dout)  // output wire [3 : 0] doutb
+	);
+	
+	always@(posedge clk)
+	begin
+	    add_r<=add_next1;
+	    add_w<=add_next2;
+	end
+	  
+	  //write operation
+	always@(*)
+	    begin
+	    if (reset)
+	        add_next2<=0;
+	    else if (write)
+	        begin
+	        if (add_next2==4'b1111)
+	            add_next2=add_w;
+	        else
+	            add_next2=add_w+1;
+	         end
+	    else
+	        add_next2=add_next2;
+	    end
+	 
+	 
+	 always@(*)
+	    begin
+	    if (reset)
+	        add_next1<=0;
+	    else if (read)
+	        begin
+	        if (add_next1==4'b1111)
+	            add_next1=add_r;
+	        else
+	            add_next1=add_r+1;
+	        end
+	    else
+	        add_next1=add_next1;
+	    end
+	   
+	//   wire [3:0]s;
+	//   wire c;
+	//sum(dout,dout,0,s,c);  
+	//assign sum={c,s};
+	
+	always@(*)
+	begin
+	//    if (dout[0])
+	        sum=din+dout;
+	//    else
+	//        sum=0;
+	end
+	
+	
+	endmodule
 
 
 Testbench: 
 
-`timescale 1ns / 1ps
-
-
-module test_tb();
-
-reg clk;
-reg read,write,reset,enable;
-reg [3:0]din;
-wire [4:0]sum;
-wire [3:0]dout;
-test uut(clk,read,write,reset,enable,din,sum,dout);
-
-initial
-begin
-clk=0;
-forever #5 clk=~clk;
-end
-
-
-initial begin
-
-read=0;write=0;reset=1;din=0;enable=1;
-#10;
-write=1;reset=0;
-din=3;
-#10;
-din=7;
-#10;
-din=4;
-#5;
-din=5;
-#5;
-write=0;read=1;
-#20;
-#10;
-#20;
-
-
-read=0;
-$finish();
-end
-endmodule
+	`timescale 1ns / 1ps
+	
+	
+	module test_tb();
+	
+	reg clk;
+	reg read,write,reset,enable;
+	reg [3:0]din;
+	wire [4:0]sum;
+	wire [3:0]dout;
+	test uut(clk,read,write,reset,enable,din,sum,dout);
+	
+	initial
+	begin
+	clk=0;
+	forever #5 clk=~clk;
+	end
+	
+	
+	initial begin
+	
+	read=0;write=0;reset=1;din=0;enable=1;
+	#10;
+	write=1;reset=0;
+	din=3;
+	#10;
+	din=7;
+	#10;
+	din=4;
+	#5;
+	din=5;
+	#5;
+	write=0;read=1;
+	#20;
+	#10;
+	#20;
+	
+	
+	read=0;
+	$finish();
+	end
+	endmodule
 
 
 
