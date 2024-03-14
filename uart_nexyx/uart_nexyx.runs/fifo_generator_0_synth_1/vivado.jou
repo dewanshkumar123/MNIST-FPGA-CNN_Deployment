@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Wed Mar 13 22:08:18 2024
+# Process ID: 25592
+# Current directory: C:/Different/Semester-4/Digital Systems/uart_nexyx/uart_nexyx.runs/fifo_generator_0_synth_1
+# Command line: vivado.exe -log fifo_generator_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fifo_generator_0.tcl
+# Log file: C:/Different/Semester-4/Digital Systems/uart_nexyx/uart_nexyx.runs/fifo_generator_0_synth_1/fifo_generator_0.vds
+# Journal file: C:/Different/Semester-4/Digital Systems/uart_nexyx/uart_nexyx.runs/fifo_generator_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source fifo_generator_0.tcl -notrace
