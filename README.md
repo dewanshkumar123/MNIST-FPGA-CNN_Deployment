@@ -18,7 +18,7 @@ Dewansh Kumar (22110071)
 ### (b) Description of the different modules: 
 UART: Field-programmable gate arrays (FPGAs) typically incorporate the Universal Asynchronous Receiver Transmitter (UART) as a basic communication interface to enable serial data transfer between the FPGA and external devices. Because of its asynchronous operation, data can be sent between the transmitter and receiver without requiring a common clock signal. A receiver module that transforms incoming serial data back into parallel form and a transmitter module that transforms parallel data into serial format for transmission are the usual components of a UART. Because of its simplicity, variety, and ease of implementation in FPGA-based systems, this serial communication protocol is widely used in many different applications, such as interfacing with wireless modules, sensors, and other peripherals.
 
-BRAM: Field-Programmable Gate Arrays (FPGAs) rely on Block RAM (BRAM), sometimes referred to as memory blocks or just RAM blocks, as a crucial part that offers on-chip memory storage for program code and data storage. BRAMs are programmable memory blocks that designers can instantiate and use to include different memory topologies into their FPGA systems.
+BRAM: Field-Programmable Gate Arrays (FPGAs) rely on Block RAM (BRAM), sometimes referred to as memory blocks or just RAM blocks, as a crucial part that offers on-chip memory storage for program code and data storage. BRAMs are programmable memory blocks that designers can instantiate and use to include different memory topologies into their FPGA systems. Single-port and dual-port variants are commonly offered by BRAMs, enabling simultaneous read and write operations from various clock domains. They are frequently used to implement lookup tables with higher storage requirements, cache memory, FIFOs (First-In, First-Out) queues, and data buffers.
 
 
 ### (c) Weekly plan: 
@@ -43,29 +43,31 @@ Verilog codes:
 	    input reset,
 	    input enable,
 	    input [3:0]din,
-	    output reg [4:0]sum,
-	    output reg [3:0]dout
+	    output reg clk_out,
+	    output reg [3:0]dout2
 	    );
 	    
 	   reg [3:0]add_w=0;
 	   reg [3:0]add_r=0;
 	   reg [3:0]add_next1,add_next2;
 	   wire [3:0] dout;
-	   
+	  
+	clock_divider I10 (clk, slow_clk );
 	   
 	blk_mem_gen_0 your_instance_name (
-	  .clka(clk),    // input wire clka
+	  .clka(slow_clk),    // input wire clka
 	  .ena(enable),      // input wire ena
 	  .wea(write),      // input wire [0 : 0] wea
 	  .addra(add_w),  // input wire [3 : 0] addra
 	  .dina(din),    // input wire [3 : 0] dina
-	  .clkb(clk),    // input wire clkb
+	  .clkb(slow_clk),    // input wire clkb
 	  .enb(read),      // input wire enb
 	  .addrb(add_r),  // input wire [3 : 0] addrb
 	  .doutb(dout)  // output wire [3 : 0] doutb
 	);
 	
-	always@(posedge clk)
+	
+	always@(posedge slow_clk)
 	begin
 	    add_r<=add_next1;
 	    add_w<=add_next2;
@@ -86,8 +88,8 @@ Verilog codes:
 	    else
 	        add_next2=add_next2;
 	    end
-	 
-	 
+	    
+	    
 	 always@(*)
 	    begin
 	    if (reset)
@@ -103,21 +105,24 @@ Verilog codes:
 	        add_next1=add_next1;
 	    end
 	   
-	//   wire [3:0]s;
-	//   wire c;
-	//sum(dout,dout,0,s,c);  
-	//assign sum={c,s};
-	
 	always@(*)
 	begin
-	//    if (dout[0])
-	        sum=din+dout;
-	//    else
-	//        sum=0;
+	        dout2=dout;
+	        clk_out=slow_clk;
+	//        sum=din+dout;
 	end
-	
-	
 	endmodule
+	
+	
+	module clock_divider(input main_clk, output slow_clk );
+	reg [31:0] counter;
+	always@ (posedge main_clk)
+	begin
+	counter <= counter + 1;
+	end
+	assign slow_clk = counter[27];
+	endmodule
+
 
 
 Testbench: 
@@ -130,9 +135,9 @@ Testbench:
 	reg clk;
 	reg read,write,reset,enable;
 	reg [3:0]din;
-	wire [4:0]sum;
 	wire [3:0]dout;
-	test uut(clk,read,write,reset,enable,din,sum,dout);
+	wire clk_out;
+	test uut(clk,read,write,reset,enable,din,clk_out,dout);
 	
 	initial
 	begin
@@ -159,11 +164,7 @@ Testbench:
 	#10;
 	#20;
 	
-	
 	read=0;
 	$finish();
 	end
 	endmodule
-
-
-
