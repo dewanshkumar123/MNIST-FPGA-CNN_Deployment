@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Mon Apr 22 16:36:51 2024
+# Process ID: 37216
+# Current directory: D:/IIT CLASSES/SEM_4/DIGITAL SYSTEMS/3D_CNN/Project Repo/3D_CNN_FPGA/BRAM_IMPLEMENT/mnist_output/mnist_output.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source D:/IIT CLASSES/SEM_4/DIGITAL SYSTEMS/3D_CNN/Project Repo/3D_CNN_FPGA/BRAM_IMPLEMENT/mnist_output/mnist_output.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: D:/IIT CLASSES/SEM_4/DIGITAL SYSTEMS/3D_CNN/Project Repo/3D_CNN_FPGA/BRAM_IMPLEMENT/mnist_output/mnist_output.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: D:/IIT CLASSES/SEM_4/DIGITAL SYSTEMS/3D_CNN/Project Repo/3D_CNN_FPGA/BRAM_IMPLEMENT/mnist_output/mnist_output.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source D:/IIT -notrace

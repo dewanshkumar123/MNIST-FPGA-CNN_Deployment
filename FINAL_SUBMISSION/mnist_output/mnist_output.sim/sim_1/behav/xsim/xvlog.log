@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/IIT CLASSES/SEM_4/DIGITAL SYSTEMS/3D_CNN/Project Repo/3D_CNN_FPGA/BRAM_IMPLEMENT/mnist_output/mnist_output.srcs/sources_1/new/mnist_op.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mnist_op
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/IIT CLASSES/SEM_4/DIGITAL SYSTEMS/3D_CNN/Project Repo/3D_CNN_FPGA/BRAM_IMPLEMENT/mnist_output/mnist_output.srcs/sim_1/new/mnist_op_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench

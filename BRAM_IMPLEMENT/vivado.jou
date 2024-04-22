@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Fri Mar 15 23:16:07 2024
+# Process ID: 27604
+# Current directory: D:/IIT CLASSES/SEM_4/DIGITAL SYSTEMS/3D_CNN/Project Repo/3D_CNN_FPGA/BRAM_IMPLEMENT
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2800 D:\IIT CLASSES\SEM_4\DIGITAL SYSTEMS\3D_CNN\Project Repo\3D_CNN_FPGA\BRAM_IMPLEMENT\project_2.xpr
+# Log file: D:/IIT CLASSES/SEM_4/DIGITAL SYSTEMS/3D_CNN/Project Repo/3D_CNN_FPGA/BRAM_IMPLEMENT/vivado.log
+# Journal file: D:/IIT CLASSES/SEM_4/DIGITAL SYSTEMS/3D_CNN/Project Repo/3D_CNN_FPGA/BRAM_IMPLEMENT\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {D:/IIT CLASSES/SEM_4/DIGITAL SYSTEMS/3D_CNN/Project Repo/3D_CNN_FPGA/BRAM_IMPLEMENT/project_2.xpr}
+update_compile_order -fileset sources_1

@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Fri Mar 15 23:16:07 2024
+# Process ID: 27604
+# Current directory: D:/IIT CLASSES/SEM_4/DIGITAL SYSTEMS/3D_CNN/Project Repo/3D_CNN_FPGA/BRAM_IMPLEMENT
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2800 D:\IIT CLASSES\SEM_4\DIGITAL SYSTEMS\3D_CNN\Project Repo\3D_CNN_FPGA\BRAM_IMPLEMENT\project_2.xpr
+# Log file: D:/IIT CLASSES/SEM_4/DIGITAL SYSTEMS/3D_CNN/Project Repo/3D_CNN_FPGA/BRAM_IMPLEMENT/vivado.log
+# Journal file: D:/IIT CLASSES/SEM_4/DIGITAL SYSTEMS/3D_CNN/Project Repo/3D_CNN_FPGA/BRAM_IMPLEMENT\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {D:/IIT CLASSES/SEM_4/DIGITAL SYSTEMS/3D_CNN/Project Repo/3D_CNN_FPGA/BRAM_IMPLEMENT/project_2.xpr}
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'D:/IIT CLASSES/SEM_4/DIGITAL SYSTEMS/3D_CNN/Project Repo/3D_CNN_FPGA/BRAM_IMPLEMENT'
+INFO: [Project 1-313] Project file moved from 'C:/Digital Systems/project_2' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] Board Part Repository Path: Could not find the directory 'D:/IIT CLASSES/SEM_4/DIGITAL SYSTEMS/3D_CNN/Project Repo/Users/91940/AppData/Roaming/Xilinx/Vivado/2019.2/xhub/board_store', nor could it be found using path 'C:/Users/91940/AppData/Roaming/Xilinx/Vivado/2019.2/xhub/board_store'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+open_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 1007.629 ; gain = 320.793
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 15 23:45:00 2024...
