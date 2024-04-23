@@ -50,10 +50,10 @@
 
 - Reading data from coe files via BRAM was challenging as many times data couldn't be read properly.
 
-- In one variable, more than 10 lac bits cannot be stored for synthesis. However, it's possible for simulation. This caused a lot of issues. We had to divide the weights in three parts, which was much time consuming to do our work successfully.
+- In one variable, more than 10 lakh bits cannot be stored for synthesis. However, it's possible for simulation. This caused a lot of issues. We had to divide the weights in three parts, which was much time consuming to do our work successfully.
 
 - We can see the simulation result only over a period of 1000 nano-seconds, and this amount of time was elapsed only in reading the data, and hence we couldn't see the other things in simulation which was also a big problem. <br>
-  This problem was solved by reducing the time period of clock, which again lead to the new problem that the data was not read properly because of reduced time period of clock. 
+  This problem was solved by reducing the time period of clock, which again lead to the new problem that the data was not read properly because of reduced time period of clock in simulation. 
   
 
 
