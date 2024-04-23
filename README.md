@@ -44,5 +44,17 @@
  
  - Output Prediction: The output of the network is a vector of size 10, representing the probabilities of each class. The predicted digit is the one with the highest probability.
  
+### Challenges Faced:
+
+- We were restricted to make all the data like pixel values, weights, biases and output of all the layers in 8-bit which caused additional work as we had to scale up/down everything so as to fit in 8-bit multiple times, if anywhere data overflew it will lead to totally wrong results.
+
+- Reading data from coe files via BRAM was challenging as many times data couldn't be read properly.
+
+- In one variable, more than 10 lac bits cannot be stored for synthesis. However, it's possible for simulation. This caused a lot of issues. We had to divide the weights in three parts, which was much time consuming to do our work successfully.
+
+- We can see the simulation result only over a period of 1000 nano-seconds, and this amount of time was elapsed only in reading the data, and hence we couldn't see the other things in simulation which was also a big problem. <br>
+  This problem was solved by reducing the time period of clock, which again lead to the new problem that the data was not read properly because of reduced time period of clock. 
+  
+
 
  
