@@ -1,0 +1,13 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+C:/Different/Semester-4/Digital Systems/cnn2/cnn2.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+C:/Different/Semester-4/Digital Systems/cnn2/cnn2.srcs/sim_1/new/tb.sv,1713818455,systemVerilog,,,,tb,,,,,,,,
+C:/Different/Semester-4/Digital Systems/cnn2/cnn2.srcs/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v,1713820506,verilog,,,,blk_mem_gen_0,,,,,,,,
+C:/Different/Semester-4/Digital Systems/cnn2/cnn2.srcs/sources_1/ip/blk_mem_gen_1/sim/blk_mem_gen_1.v,1713815638,verilog,,C:/Different/Semester-4/Digital Systems/cnn2/cnn2.srcs/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v,,blk_mem_gen_1,,,,,,,,
+C:/Different/Semester-4/Digital Systems/cnn2/cnn2.srcs/sources_1/ip/blk_mem_gen_2/sim/blk_mem_gen_2.v,1713829181,verilog,,C:/Different/Semester-4/Digital Systems/cnn2/cnn2.srcs/sources_1/ip/blk_mem_gen_4/sim/blk_mem_gen_4.v,,blk_mem_gen_2,,,,,,,,
+C:/Different/Semester-4/Digital Systems/cnn2/cnn2.srcs/sources_1/ip/blk_mem_gen_3/sim/blk_mem_gen_3.v,1713828139,verilog,,C:/Different/Semester-4/Digital Systems/cnn2/cnn2.srcs/sources_1/ip/blk_mem_gen_1/sim/blk_mem_gen_1.v,,blk_mem_gen_3,,,,,,,,
+C:/Different/Semester-4/Digital Systems/cnn2/cnn2.srcs/sources_1/ip/blk_mem_gen_4/sim/blk_mem_gen_4.v,1713828425,verilog,,C:/Different/Semester-4/Digital Systems/cnn2/cnn2.srcs/sources_1/ip/blk_mem_gen_3/sim/blk_mem_gen_3.v,,blk_mem_gen_4,,,,,,,,
+C:/Different/Semester-4/Digital Systems/cnn2/cnn2.srcs/sources_1/ip/blk_mem_gen_5/sim/blk_mem_gen_5.v,1713829969,verilog,,C:/Different/Semester-4/Digital Systems/cnn2/cnn2.srcs/sources_1/ip/blk_mem_gen_4/sim/blk_mem_gen_4.v,,blk_mem_gen_5,,,,,,,,
+C:/Different/Semester-4/Digital Systems/cnn2/cnn2.srcs/sources_1/new/top_module.sv,1713830787,systemVerilog,,C:/Different/Semester-4/Digital Systems/cnn2/cnn2.srcs/sim_1/new/tb.sv,,convolution;fully_connected_module;max_pooling;neurons1;neurons2;neurons3;neurons_last;output_layer_module;reading;top_module,,,,,,,,
