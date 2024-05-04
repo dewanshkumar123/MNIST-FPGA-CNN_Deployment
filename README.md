@@ -2,10 +2,10 @@
 ### Indian Institute of Technology, Gandhinagar
 
 ### Group Members:-
+- Dewansh Kumar (22110071)
 - Sushant Gudmewar (22110264),
 - John Twipraham Debbarma (22110108),
 - Parag Sarvoday (22110179) 
-- Dewansh Kumar (22110071)
 
 	
 # Problem objective: Deployment of a trained CNN model on FPGA for image classification of the MNIST dataset.
